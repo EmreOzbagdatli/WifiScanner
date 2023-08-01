@@ -11,6 +11,7 @@
 		1EDF2F0B2A79A78E0010847C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF2F0A2A79A78E0010847C /* ContentView.swift */; };
 		1EDF2F0D2A79A78F0010847C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF2F0C2A79A78F0010847C /* Assets.xcassets */; };
 		1EDF2F102A79A78F0010847C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF2F0F2A79A78F0010847C /* Preview Assets.xcassets */; };
+		1EDF2F1B2A79B0BF0010847C /* ListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF2F1A2A79B0BF0010847C /* ListScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1EDF2F0A2A79A78E0010847C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1EDF2F0C2A79A78F0010847C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EDF2F0F2A79A78F0010847C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1EDF2F1A2A79B0BF0010847C /* ListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				1EDF2F0A2A79A78E0010847C /* ContentView.swift */,
 				1EDF2F0C2A79A78F0010847C /* Assets.xcassets */,
 				1EDF2F0E2A79A78F0010847C /* Preview Content */,
+				1EDF2F1A2A79B0BF0010847C /* ListScreenView.swift */,
 			);
 			path = WifiScanner;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EDF2F1B2A79B0BF0010847C /* ListScreenView.swift in Sources */,
 				1EDF2F0B2A79A78E0010847C /* ContentView.swift in Sources */,
 				1EDF2F092A79A78E0010847C /* WifiScannerApp.swift in Sources */,
 			);

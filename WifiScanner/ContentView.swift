@@ -9,15 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Wifi Scanner")
+
+        VStack{
+            Text("Click the button to start scanning Wi-Fİ networks")
+                .font(.title)
+                .padding()
+            
+            NavigationLink(destination: ListScreenView()){
+                Text("Start Scanning")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: 200,height: 50)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            }
         }
-        .padding()
+        .navigationBarHidden(true)
+        
+        
+        
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
