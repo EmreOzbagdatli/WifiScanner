@@ -12,7 +12,6 @@
 		1EDF2F0D2A79A78F0010847C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF2F0C2A79A78F0010847C /* Assets.xcassets */; };
 		1EDF2F102A79A78F0010847C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF2F0F2A79A78F0010847C /* Preview Assets.xcassets */; };
 		1EDF2F1B2A79B0BF0010847C /* ListScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF2F1A2A79B0BF0010847C /* ListScreenView.swift */; };
-		5DCC954C28602DE2FA4E35C8 /* Pods_WifiScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1DA453CB0564BF2195301DE /* Pods_WifiScanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +21,6 @@
 		1EDF2F0C2A79A78F0010847C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EDF2F0F2A79A78F0010847C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1EDF2F1A2A79B0BF0010847C /* ListScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenView.swift; sourceTree = "<group>"; };
-		3ED5D4F30F99004658CB683E /* Pods-WifiScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WifiScanner.release.xcconfig"; path = "Target Support Files/Pods-WifiScanner/Pods-WifiScanner.release.xcconfig"; sourceTree = "<group>"; };
-		7EC8B9556EF062C0108C595F /* Pods-WifiScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WifiScanner.debug.xcconfig"; path = "Target Support Files/Pods-WifiScanner/Pods-WifiScanner.debug.xcconfig"; sourceTree = "<group>"; };
-		A1DA453CB0564BF2195301DE /* Pods_WifiScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WifiScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +28,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DCC954C28602DE2FA4E35C8 /* Pods_WifiScanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,8 +39,6 @@
 			children = (
 				1EDF2F072A79A78E0010847C /* WifiScanner */,
 				1EDF2F062A79A78E0010847C /* Products */,
-				5792A0AB6531A7F108BD59D0 /* Pods */,
-				2FE61F80FA6E7F38D237DBD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,24 +70,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2FE61F80FA6E7F38D237DBD7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A1DA453CB0564BF2195301DE /* Pods_WifiScanner.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5792A0AB6531A7F108BD59D0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7EC8B9556EF062C0108C595F /* Pods-WifiScanner.debug.xcconfig */,
-				3ED5D4F30F99004658CB683E /* Pods-WifiScanner.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,11 +77,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EDF2F132A79A78F0010847C /* Build configuration list for PBXNativeTarget "WifiScanner" */;
 			buildPhases = (
-				55B38FE957C20BB6A353FB4F /* [CP] Check Pods Manifest.lock */,
 				1EDF2F012A79A78E0010847C /* Sources */,
 				1EDF2F022A79A78E0010847C /* Frameworks */,
 				1EDF2F032A79A78E0010847C /* Resources */,
-				2121A0DC9B4808BA4C7EC5F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,48 +134,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2121A0DC9B4808BA4C7EC5F8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WifiScanner/Pods-WifiScanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WifiScanner/Pods-WifiScanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WifiScanner/Pods-WifiScanner-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		55B38FE957C20BB6A353FB4F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WifiScanner-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1EDF2F012A79A78E0010847C /* Sources */ = {
@@ -334,7 +265,6 @@
 		};
 		1EDF2F142A79A78F0010847C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EC8B9556EF062C0108C595F /* Pods-WifiScanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -364,7 +294,6 @@
 		};
 		1EDF2F152A79A78F0010847C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3ED5D4F30F99004658CB683E /* Pods-WifiScanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
