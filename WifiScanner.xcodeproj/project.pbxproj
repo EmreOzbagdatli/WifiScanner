@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EC62D972A7A5DC600CB2351 /* SavedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC62D962A7A5DC600CB2351 /* SavedScreenView.swift */; };
 		1EDF2F092A79A78E0010847C /* WifiScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF2F082A79A78E0010847C /* WifiScannerApp.swift */; };
 		1EDF2F0B2A79A78E0010847C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF2F0A2A79A78E0010847C /* ContentView.swift */; };
 		1EDF2F0D2A79A78F0010847C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF2F0C2A79A78F0010847C /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EC62D962A7A5DC600CB2351 /* SavedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScreenView.swift; sourceTree = "<group>"; };
 		1EDF2F052A79A78E0010847C /* WifiScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WifiScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDF2F082A79A78E0010847C /* WifiScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiScannerApp.swift; sourceTree = "<group>"; };
 		1EDF2F0A2A79A78E0010847C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				1EDF2F0C2A79A78F0010847C /* Assets.xcassets */,
 				1EDF2F0E2A79A78F0010847C /* Preview Content */,
 				1EDF2F1A2A79B0BF0010847C /* ListScreenView.swift */,
+				1EC62D962A7A5DC600CB2351 /* SavedScreenView.swift */,
 			);
 			path = WifiScanner;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				1EDF2F1B2A79B0BF0010847C /* ListScreenView.swift in Sources */,
 				1EDF2F0B2A79A78E0010847C /* ContentView.swift in Sources */,
+				1EC62D972A7A5DC600CB2351 /* SavedScreenView.swift in Sources */,
 				1EDF2F092A79A78E0010847C /* WifiScannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

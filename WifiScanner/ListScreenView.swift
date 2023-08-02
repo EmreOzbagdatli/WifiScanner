@@ -10,16 +10,29 @@ import SwiftUI
 struct ListScreenView: View {
     var body: some View {
         NavigationView {
-            List {
-                Section(header: Text("Network Information")) {
-                    ForEach(exampleConnection, id: \.self.0) { example in
-                        VStack(alignment: .leading) {
-                            Text("SSID: \(example.0)")
-                            Text("BSSID: \(example.1)")
-                            Text("IP Address: \(example.2)")
+            ZStack{
+                List {
+                    Section(header: Text("Network Information")) {
+                        ForEach(exampleConnection, id: \.self.0) { example in
+                            VStack(alignment: .leading) {
+                                Text("SSID: \(example.0)")
+                                Text("BSSID: \(example.1)")
+                                Text("IP Address: \(example.2)")
+                            }
                         }
                     }
                 }
+                NavigationLink(destination: SavedScreenView()){
+                    Text("Save Data")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .frame(width: 200,height: 50)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+
+                
+                
             }
             
             
