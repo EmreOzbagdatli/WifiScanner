@@ -6,49 +6,45 @@
 //
 
 import SwiftUI
+import FGRoute
 
 struct ListScreenView: View {
-    var body: some View {
-        NavigationView {
-            ZStack{
-                List {
-                    Section(header: Text("Network Information")) {
-                        ForEach(exampleConnection, id: \.self.0) { example in
-                            VStack(alignment: .leading) {
-                                Text("SSID: \(example.0)")
-                                Text("BSSID: \(example.1)")
-                                Text("IP Address: \(example.2)")
-                            }
-                        }
-                    }
-                }
-                NavigationLink(destination: SavedScreenView()){
-                    Text("Save Data")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .frame(width: 200,height: 50)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                }
-
-                
-                
-            }
-            
-            
-            .navigationTitle("Wi-Fi Connection")
-        }
-    }
     
-    var exampleConnection: [(String, String, String)] = [
-        ("Example SSID 1", "00:11:22:33:44:55", "192.168.1.100")
-    ]
-}
+    @EnvironmentObject var ipProvider: IPAddressDataProvider
+    
+    @State private var ipAddress: String = ""
+    
+    var body: some View {
+        VStack {
+            Text("\(ipProvider.currentIP.ipAddress)")
+            Text("\(ipProvider.currentIP.ssID ?? "No value")")
+            Text("\(ipProvider.currentIP.bssID ?? "No value")")
+            
+            Button {
+                ipProvider.saveToLocal()
+            } label: {
+                Text("Save to local")
+            }.padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(20)
+            
 
-struct ListScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListScreenView()
+        }.onAppear {
+            ipAddress = FGRoute.getIPAddress()
+        }
+        .onChange(of: ipAddress, perform: { newValue in
+            let model = NetworkInfoModel(ipAddress: newValue, ssID: FGRoute.getSSID(), bssID: FGRoute.getBSSID())
+            self.ipProvider.currentIP = model
+        })
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink(destination: SavedScreenView()) {
+                    Image(systemName: "book")
+                }
+            }
+        }
+
     }
+
 }
-
-
