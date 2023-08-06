@@ -23,8 +23,12 @@ struct SavedScreenView: View {
                     }
                     
                 }
-            }
-        }.onAppear {
+            }.font(.title2)
+        }
+        .navigationTitle("Saved Informations")
+        
+        
+        .onAppear {
             ipProvider.getLocal()
         }
         

@@ -16,9 +16,28 @@ struct ListScreenView: View {
     
     var body: some View {
         VStack {
-            Text("\(ipProvider.currentIP.ipAddress)")
-            Text("\(ipProvider.currentIP.ssID ?? "No value")")
-            Text("\(ipProvider.currentIP.bssID ?? "No value")")
+            Text("IP Address: \(ipProvider.currentIP.ipAddress)")
+                
+                .foregroundColor(.black)
+                .frame(width: 250,height: 60)
+                .font(.title2)
+                
+
+            Text("SSID: \(ipProvider.currentIP.ssID ?? "No value")")
+                
+                .foregroundColor(.black)
+                .frame(width: 250,height: 60)
+                .font(.title2)
+            
+            Text("BSSID: \(ipProvider.currentIP.bssID ?? "No value")")
+                .foregroundColor(.black)
+
+                .frame(width: 250,height: 60)
+                .padding(.bottom,50)
+                .font(.title2)
+
+                
+            
             
             Button {
                 ipProvider.saveToLocal()
@@ -28,9 +47,11 @@ struct ListScreenView: View {
                 .background(Color.blue)
                 .foregroundColor(.white)
                 .cornerRadius(20)
+                
             
 
-        }.onAppear {
+        }.navigationTitle("Scanned Datas")
+        .onAppear {
             ipAddress = FGRoute.getIPAddress()
         }
         .onChange(of: ipAddress, perform: { newValue in

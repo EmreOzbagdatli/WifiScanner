@@ -9,6 +9,7 @@ import Foundation
 
 
 final class IPAddressDataProvider: ObservableObject {
+    
     @Published var savedIPs: [NetworkInfoModel] = []
     @Published var currentIP: NetworkInfoModel = .init(ipAddress: "", ssID: "", bssID: "")
     
@@ -43,7 +44,6 @@ final class IPAddressDataProvider: ObservableObject {
             
             let data = try encoder.encode(ips)
 
-            // Write/Set Data
             UserDefaults.standard.set(data, forKey: "IPs")
 
         } catch {
