@@ -44,7 +44,7 @@ struct LocationPermissionView: View {
                 .padding(.bottom,20)
             
             
-            Text("Scan your Wi-Fi informations.")
+            Text("Scan your Wi-Fi")
                 .font(.title)
 
             Text("(IP Adress, SSID , BSSID)")
