@@ -7,5 +7,12 @@
 */
 
 
-"Scan your Wi-Fi" = "Wifi Tara";
+"Scan your Wi-Fi" = "Wi-Fi Tara";
 "Click for scan" = "Taramak için tıklayınız";
+"Device IP Address" = "Cihaz IP Adresi";
+"Current SSID" = "Şuanki SSID";
+"Current BSSID" = "Şuanki BSSID";
+"Save to Local" = "Telefona Kaydet";
+"NO VALUE" = "Bulunamadı";
+"Saved Informations" = "Kayıtlı Bilgiler";
+

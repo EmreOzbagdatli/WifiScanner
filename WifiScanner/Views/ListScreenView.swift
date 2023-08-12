@@ -24,14 +24,14 @@ struct ListScreenView: View {
                     .padding()
                 
                 
-                Text("Current Wi-Fi SSID")
+                Text("Current SSID")
                     .font(.title)
                     .padding()
                     .background(Color.gray)
                     .cornerRadius(10)
                     .shadow(radius: 20)
                 
-                Text(": \(viewModel.networkInfo.ssID ?? "NO VALUE")")
+                Text(": \(viewModel.networkInfo.ssID ?? "-")")
                     .font(.title2)
                     .padding()
                 
@@ -42,7 +42,7 @@ struct ListScreenView: View {
                     .cornerRadius(10)
                     .shadow(radius: 20)
                 
-                Text(" : \(viewModel.networkInfo.bssID ?? "NO VALUE")")
+                Text(" : \(viewModel.networkInfo.bssID ?? "-")")
                     .font(.title2)
                     .padding()
                 
