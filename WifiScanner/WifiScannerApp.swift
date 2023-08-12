@@ -9,14 +9,12 @@ import SwiftUI
 
 @main
 struct WifiScannerApp: App {
-    
-    @StateObject var ipProvider: IPAddressDataProvider = IPAddressDataProvider()
-    
+        
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                LocationPermissionView()
-            }.environmentObject(ipProvider)
+                ContentView()
+            }
             
         }
     }

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1BA2E02A86AA770030317C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E1BA2E22A86AA770030317C /* Localizable.strings */; };
 		1E2022652A7D7B530033775A /* NetworkInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2022642A7D7B530033775A /* NetworkInfoModel.swift */; };
-		1E2022672A7D887F0033775A /* IPAddressDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2022662A7D887F0033775A /* IPAddressDataProvider.swift */; };
+		1E2022672A7D887F0033775A /* IPAddressDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2022662A7D887F0033775A /* IPAddressDataManager.swift */; };
+		1E529EDA2A866158006FBFAC /* WifiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E529ED92A866158006FBFAC /* WifiManager.swift */; };
+		1E529EE52A86649A006FBFAC /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E529EE42A86649A006FBFAC /* ContentViewModel.swift */; };
+		1E529EE72A868C01006FBFAC /* ListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E529EE62A868C01006FBFAC /* ListScreenViewModel.swift */; };
+		1E529EE92A868EEA006FBFAC /* SavedScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E529EE82A868EEA006FBFAC /* SavedScreenViewModel.swift */; };
 		1E96F8DF2A7D21310000EA27 /* Pods_WifiScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F31F37696C1F220E88E057 /* Pods_WifiScanner.framework */; };
 		1EC62D972A7A5DC600CB2351 /* SavedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC62D962A7A5DC600CB2351 /* SavedScreenView.swift */; };
 		1EDF2F092A79A78E0010847C /* WifiScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF2F082A79A78E0010847C /* WifiScannerApp.swift */; };
@@ -19,8 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E1BA2E12A86AA770030317C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E1BA2E32A86AA7A0030317C /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E2022642A7D7B530033775A /* NetworkInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfoModel.swift; sourceTree = "<group>"; };
-		1E2022662A7D887F0033775A /* IPAddressDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressDataProvider.swift; sourceTree = "<group>"; };
+		1E2022662A7D887F0033775A /* IPAddressDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddressDataManager.swift; sourceTree = "<group>"; };
+		1E529ED92A866158006FBFAC /* WifiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiManager.swift; sourceTree = "<group>"; };
+		1E529EE42A86649A006FBFAC /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		1E529EE62A868C01006FBFAC /* ListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenViewModel.swift; sourceTree = "<group>"; };
+		1E529EE82A868EEA006FBFAC /* SavedScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScreenViewModel.swift; sourceTree = "<group>"; };
 		1E96F8DD2A7D1FC80000EA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1EC62D962A7A5DC600CB2351 /* SavedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScreenView.swift; sourceTree = "<group>"; };
 		1EDF2F052A79A78E0010847C /* WifiScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WifiScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,9 +57,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E529EDF2A86635E006FBFAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1EC62D962A7A5DC600CB2351 /* SavedScreenView.swift */,
+				1EDF2F1A2A79B0BF0010847C /* ListScreenView.swift */,
+				1EDF2F0A2A79A78E0010847C /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1E529EE02A866364006FBFAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E2022642A7D7B530033775A /* NetworkInfoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1E529EE12A866369006FBFAC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1E529EE42A86649A006FBFAC /* ContentViewModel.swift */,
+				1E529EE62A868C01006FBFAC /* ListScreenViewModel.swift */,
+				1E529EE82A868EEA006FBFAC /* SavedScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1E529EE32A866481006FBFAC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1E2022662A7D887F0033775A /* IPAddressDataManager.swift */,
+				1E529ED92A866158006FBFAC /* WifiManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		1EDF2EFC2A79A78E0010847C = {
 			isa = PBXGroup;
 			children = (
+				1E1BA2E22A86AA770030317C /* Localizable.strings */,
 				1EDF2F072A79A78E0010847C /* WifiScanner */,
 				1EDF2F062A79A78E0010847C /* Products */,
 				EA9D8311B546A12D54EA7B09 /* Pods */,
@@ -67,15 +116,14 @@
 		1EDF2F072A79A78E0010847C /* WifiScanner */ = {
 			isa = PBXGroup;
 			children = (
+				1E529EE32A866481006FBFAC /* Manager */,
+				1E529EE02A866364006FBFAC /* Models */,
+				1E529EE12A866369006FBFAC /* ViewModel */,
+				1E529EDF2A86635E006FBFAC /* Views */,
 				1E96F8DD2A7D1FC80000EA27 /* Info.plist */,
 				1EDF2F082A79A78E0010847C /* WifiScannerApp.swift */,
-				1EDF2F0A2A79A78E0010847C /* ContentView.swift */,
 				1EDF2F0C2A79A78F0010847C /* Assets.xcassets */,
 				1EDF2F0E2A79A78F0010847C /* Preview Content */,
-				1EDF2F1A2A79B0BF0010847C /* ListScreenView.swift */,
-				1EC62D962A7A5DC600CB2351 /* SavedScreenView.swift */,
-				1E2022642A7D7B530033775A /* NetworkInfoModel.swift */,
-				1E2022662A7D887F0033775A /* IPAddressDataProvider.swift */,
 			);
 			path = WifiScanner;
 			sourceTree = "<group>";
@@ -116,7 +164,6 @@
 				1EDF2F012A79A78E0010847C /* Sources */,
 				1EDF2F022A79A78E0010847C /* Frameworks */,
 				1EDF2F032A79A78E0010847C /* Resources */,
-				5C4896B4009E5FA8533F182B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +196,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 1EDF2EFC2A79A78E0010847C;
 			productRefGroup = 1EDF2F062A79A78E0010847C /* Products */;
@@ -166,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EDF2F102A79A78F0010847C /* Preview Assets.xcassets in Resources */,
+				1E1BA2E02A86AA770030317C /* Localizable.strings in Resources */,
 				1EDF2F0D2A79A78F0010847C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,23 +244,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C4896B4009E5FA8533F182B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WifiScanner/Pods-WifiScanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WifiScanner/Pods-WifiScanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WifiScanner/Pods-WifiScanner-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,16 +251,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E2022672A7D887F0033775A /* IPAddressDataProvider.swift in Sources */,
+				1E2022672A7D887F0033775A /* IPAddressDataManager.swift in Sources */,
 				1E2022652A7D7B530033775A /* NetworkInfoModel.swift in Sources */,
+				1E529EE72A868C01006FBFAC /* ListScreenViewModel.swift in Sources */,
+				1E529EE92A868EEA006FBFAC /* SavedScreenViewModel.swift in Sources */,
+				1E529EE52A86649A006FBFAC /* ContentViewModel.swift in Sources */,
 				1EDF2F1B2A79B0BF0010847C /* ListScreenView.swift in Sources */,
 				1EDF2F0B2A79A78E0010847C /* ContentView.swift in Sources */,
+				1E529EDA2A866158006FBFAC /* WifiManager.swift in Sources */,
 				1EC62D972A7A5DC600CB2351 /* SavedScreenView.swift in Sources */,
 				1EDF2F092A79A78E0010847C /* WifiScannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1E1BA2E22A86AA770030317C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E1BA2E12A86AA770030317C /* en */,
+				1E1BA2E32A86AA7A0030317C /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1EDF2F112A79A78F0010847C /* Debug */ = {
@@ -359,7 +407,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WifiScanner/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "LOC VER LAN";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = dfdsfds;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = deneme2;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = denem1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -393,7 +443,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WifiScanner/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "LOC VER LAN";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = dfdsfds;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = deneme2;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = denem1;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

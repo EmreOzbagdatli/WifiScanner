@@ -6,7 +6,7 @@ target 'WifiScanner' do
   use_frameworks!
 
   # Pods for WifiScanner
-pod "FGRoute"
+
 platform :ios, '12.0' # set IPHONEOS_DEPLOYMENT_TARGET for the pods project
 post_install do |installer|
   installer.pods_project.targets.each do |target|

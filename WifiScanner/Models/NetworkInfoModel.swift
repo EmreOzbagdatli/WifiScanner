@@ -9,6 +9,7 @@ import Foundation
 
 
 struct NetworkInfoModel: Codable {
+   
     let ipAddress: String
     let ssID: String?
     let bssID: String?

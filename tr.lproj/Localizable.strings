@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  WifiScanner
+
+  Created by Emre Özbağdatlı on 11.08.2023.
+  
+*/
+
+
+"Scan your Wi-Fi" = "Wifi Tara";
+"Click for scan" = "Taramak için tıklayınız";

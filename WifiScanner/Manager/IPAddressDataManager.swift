@@ -8,21 +8,23 @@
 import Foundation
 
 
-final class IPAddressDataProvider: ObservableObject {
-    
-    @Published var savedIPs: [NetworkInfoModel] = []
-    @Published var currentIP: NetworkInfoModel = .init(ipAddress: "", ssID: "", bssID: "")
-    
-    func saveToLocal() {
-        saveToUserDefaults()
-        
+final class IPAddressDataManager {
+
+    static let shared = IPAddressDataManager()
+
+    func saveToLocal(newNetworkInfo: NetworkInfoModel) {
+        saveToUserDefaults(newNetworkInfo: newNetworkInfo)
+
     }
-    
-    func getLocal() {
-        self.savedIPs = readFromUserDefaults()
-        print("\(self.savedIPs)")
+
+    func getLocal() -> [NetworkInfoModel] {
+        return readFromUserDefaults()
     }
-    
+
+    func deleteAllNetworkInfo() {
+        self.deleteAllLocal()
+    }
+
     private func readFromUserDefaults() -> [NetworkInfoModel] {
         if let data = UserDefaults.standard.data(forKey: "IPs") {
             do {
@@ -35,19 +37,28 @@ final class IPAddressDataProvider: ObservableObject {
         }
         return []
     }
-    
-    private func saveToUserDefaults() {
+
+    private func saveToUserDefaults(newNetworkInfo: NetworkInfoModel) {
         do {
             let encoder = JSONEncoder()
             var ips = readFromUserDefaults()
-            ips.append(currentIP)
-            
+            ips.append(newNetworkInfo)
+
             let data = try encoder.encode(ips)
 
             UserDefaults.standard.set(data, forKey: "IPs")
-
         } catch {
             print("Unable to Encode Array of Notes (\(error))")
         }
     }
+
+    private func deleteAllLocal() {
+
+        var array = readFromUserDefaults()
+        array.removeAll()
+        UserDefaults.standard.set(array, forKey: "IPs")
+
+    }
 }
+
+
