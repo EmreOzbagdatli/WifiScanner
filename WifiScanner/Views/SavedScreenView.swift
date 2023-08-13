@@ -19,11 +19,11 @@ struct SavedScreenView: View {
                         Text("IP: \(viewModel.networkInfoModels[index].ipAddress)")
                             .bold()
                         HStack {
-                            Text("SSID: \(viewModel.networkInfoModels[index].ssID ?? "No value")")
+                            Text("SSID: \(viewModel.networkInfoModels[index].ssID ?? "Not Found")")
                                 .foregroundColor(.green)
                                 .bold()
                             Spacer()
-                            Text("BSSID:\(viewModel.networkInfoModels[index].bssID ?? "No value")")
+                            Text("BSSID:\(viewModel.networkInfoModels[index].bssID ?? "Not Found")")
                                 .foregroundColor(.blue)
                                 .bold()
                         }

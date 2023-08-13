@@ -94,6 +94,14 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		1EB085C52A899D5200F11841 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF2F082A79A78E0010847C /* WifiScannerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		1EDF2EFC2A79A78E0010847C = {
 			isa = PBXGroup;
 			children = (
@@ -116,12 +124,12 @@
 		1EDF2F072A79A78E0010847C /* WifiScanner */ = {
 			isa = PBXGroup;
 			children = (
+				1EB085C52A899D5200F11841 /* App */,
 				1E529EE32A866481006FBFAC /* Manager */,
 				1E529EE02A866364006FBFAC /* Models */,
 				1E529EE12A866369006FBFAC /* ViewModel */,
 				1E529EDF2A86635E006FBFAC /* Views */,
 				1E96F8DD2A7D1FC80000EA27 /* Info.plist */,
-				1EDF2F082A79A78E0010847C /* WifiScannerApp.swift */,
 				1EDF2F0C2A79A78F0010847C /* Assets.xcassets */,
 				1EDF2F0E2A79A78F0010847C /* Preview Content */,
 			);
@@ -408,8 +416,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WifiScanner/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = dfdsfds;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = deneme2;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = denem1;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Permission";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -444,8 +452,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WifiScanner/Info.plist;
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = dfdsfds;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = deneme2;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = denem1;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Permission";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Permission";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
