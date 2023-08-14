@@ -14,6 +14,7 @@
 		1E529EE52A86649A006FBFAC /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E529EE42A86649A006FBFAC /* ContentViewModel.swift */; };
 		1E529EE72A868C01006FBFAC /* ListScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E529EE62A868C01006FBFAC /* ListScreenViewModel.swift */; };
 		1E529EE92A868EEA006FBFAC /* SavedScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E529EE82A868EEA006FBFAC /* SavedScreenViewModel.swift */; };
+		1E6D56502A8A462A0012F63F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6D564F2A8A462A0012F63F /* Extension.swift */; };
 		1E96F8DF2A7D21310000EA27 /* Pods_WifiScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F31F37696C1F220E88E057 /* Pods_WifiScanner.framework */; };
 		1EC62D972A7A5DC600CB2351 /* SavedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC62D962A7A5DC600CB2351 /* SavedScreenView.swift */; };
 		1EDF2F092A79A78E0010847C /* WifiScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF2F082A79A78E0010847C /* WifiScannerApp.swift */; };
@@ -32,6 +33,7 @@
 		1E529EE42A86649A006FBFAC /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		1E529EE62A868C01006FBFAC /* ListScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreenViewModel.swift; sourceTree = "<group>"; };
 		1E529EE82A868EEA006FBFAC /* SavedScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScreenViewModel.swift; sourceTree = "<group>"; };
+		1E6D564F2A8A462A0012F63F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		1E96F8DD2A7D1FC80000EA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1EC62D962A7A5DC600CB2351 /* SavedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedScreenView.swift; sourceTree = "<group>"; };
 		1EDF2F052A79A78E0010847C /* WifiScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WifiScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,14 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		1E6D564E2A8A461F0012F63F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1E6D564F2A8A462A0012F63F /* Extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		1EB085C52A899D5200F11841 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		1EDF2F072A79A78E0010847C /* WifiScanner */ = {
 			isa = PBXGroup;
 			children = (
+				1E6D564E2A8A461F0012F63F /* Common */,
 				1EB085C52A899D5200F11841 /* App */,
 				1E529EE32A866481006FBFAC /* Manager */,
 				1E529EE02A866364006FBFAC /* Models */,
@@ -263,6 +274,7 @@
 				1E2022652A7D7B530033775A /* NetworkInfoModel.swift in Sources */,
 				1E529EE72A868C01006FBFAC /* ListScreenViewModel.swift in Sources */,
 				1E529EE92A868EEA006FBFAC /* SavedScreenViewModel.swift in Sources */,
+				1E6D56502A8A462A0012F63F /* Extension.swift in Sources */,
 				1E529EE52A86649A006FBFAC /* ContentViewModel.swift in Sources */,
 				1EDF2F1B2A79B0BF0010847C /* ListScreenView.swift in Sources */,
 				1EDF2F0B2A79A78E0010847C /* ContentView.swift in Sources */,

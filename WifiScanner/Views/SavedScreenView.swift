@@ -11,6 +11,7 @@ struct SavedScreenView: View {
 
     @StateObject var viewModel = SavedScreenViewModel()
 
+
     var body: some View {
         ScrollView {
             VStack() {
@@ -19,28 +20,30 @@ struct SavedScreenView: View {
                         Text("IP: \(viewModel.networkInfoModels[index].ipAddress)")
                             .bold()
                         HStack {
-                            Text("SSID: \(viewModel.networkInfoModels[index].ssID ?? "Not Found")")
+                            Text("SSID: \(viewModel.networkInfoModels[index].ssID ?? "Not Found".localized())")
                                 .foregroundColor(.green)
-                                .bold()
+                                .minimumScaleFactor(0.1)
+
+                                
                             Spacer()
-                            Text("BSSID:\(viewModel.networkInfoModels[index].bssID ?? "Not Found")")
+                            Text("BSSID:\(viewModel.networkInfoModels[index].bssID ?? "Not Found".localized())")
                                 .foregroundColor(.blue)
-                                .bold()
+                                .minimumScaleFactor(0.1)
                         }
                     } .minimumScaleFactor(0.1)
                         .multilineTextAlignment(.center)
                         .font(.body)
                         .padding(.horizontal)
                         .font(.title2)
-                            .padding()
-                            .background(Color.gray.opacity(0.1))
-                            .cornerRadius(15)
-                            .padding(.horizontal)
+                        .padding()
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(15)
+                        .padding(.horizontal)
                 }
             }
         }.navigationTitle("Saved Informations")
 
-            
+
             .onAppear {
             viewModel.fetchOldInfos()
         }.toolbar(content: {

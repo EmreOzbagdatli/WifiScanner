@@ -31,9 +31,11 @@ struct ListScreenView: View {
                     .cornerRadius(10)
                     .shadow(radius: 20)
                 
-                Text(": \(viewModel.networkInfo.ssID ?? "Not Found")")
+                
+                Text(": \(viewModel.networkInfo.ssID ?? "Not Found".localized())")
                     .font(.title2)
                     .padding()
+                
                 
                 Text("Current BSSID")
                     .font(.title)
@@ -42,7 +44,7 @@ struct ListScreenView: View {
                     .cornerRadius(10)
                     .shadow(radius: 20)
                 
-                Text(" : \(viewModel.networkInfo.bssID ?? "Not Found")")
+                Text(" : \(viewModel.networkInfo.bssID ?? "Not Found".localized())")
                     .font(.title2)
                     .padding()
                 
